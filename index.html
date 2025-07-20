@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Congratulations! You've Won an iPhone 17</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <title>Congratulations Ken Ivan!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #6e45e2, #88d3ce);
+            background: linear-gradient(135deg, #6e45e2, #88d3ce, #ff7c43, #ff2d75);
+            background-size: 400% 400%;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -23,13 +23,19 @@
             padding: 20px;
             overflow: hidden;
             position: relative;
+            animation: gradientBG 15s ease infinite;
+        }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         
         .confetti {
             position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: #f00;
+            width: 12px;
+            height: 12px;
             animation: fall linear forwards;
             z-index: 1;
         }
@@ -45,8 +51,8 @@
             position: relative;
             z-index: 2;
             background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             max-width: 800px;
             width: 100%;
             overflow: hidden;
@@ -70,30 +76,30 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px;
-            margin-bottom: 20px;
+            gap: 15px;
+            margin-bottom: 25px;
         }
         
         .apple-logo {
-            font-size: 40px;
+            font-size: 46px;
             color: #333;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
         .logo-text {
-            font-family: 'Poppins', sans-serif;
             font-weight: 800;
-            font-size: 36px;
+            font-size: 42px;
             letter-spacing: -1px;
             background: linear-gradient(45deg, #ff2d75, #ff7c43, #ffdd59);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
         h1 {
-            font-family: 'Poppins', sans-serif;
             font-weight: 800;
-            font-size: 48px;
-            margin-bottom: 10px;
+            font-size: 52px;
+            margin-bottom: 15px;
             background: linear-gradient(45deg, #6e45e2, #ff2d75);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -102,21 +108,25 @@
         }
         
         .subtitle {
-            font-size: 24px;
+            font-size: 28px;
             color: #666;
             margin-bottom: 30px;
             font-weight: 600;
         }
         
         .winner-name {
-            font-size: 42px;
+            font-size: 46px;
             font-weight: 800;
             color: #ff2d75;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin: 20px 0;
+            text-shadow: 0 3px 6px rgba(0,0,0,0.15);
+            margin: 25px 0;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             animation: pulse 2s infinite;
+            padding: 10px 30px;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+            border-radius: 15px;
+            display: inline-block;
         }
         
         @keyframes pulse {
@@ -128,8 +138,8 @@
         .prize-container {
             position: relative;
             margin: 40px auto;
-            width: 300px;
-            height: 600px;
+            width: 320px;
+            height: 640px;
             perspective: 1000px;
         }
         
@@ -151,24 +161,24 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(135deg, #a2aab0, #eef2f3);
-            border-radius: 40px;
-            box-shadow: inset 0 0 0 4px #e2e6e9, 0 30px 50px rgba(0,0,0,0.3);
+            border-radius: 45px;
+            box-shadow: inset 0 0 0 5px #e2e6e9, 0 30px 60px rgba(0,0,0,0.4);
             overflow: hidden;
         }
         
         .screen {
             position: absolute;
-            top: 20px;
-            left: 15px;
-            right: 15px;
-            bottom: 20px;
+            top: 25px;
+            left: 18px;
+            right: 18px;
+            bottom: 25px;
             background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
-            border-radius: 30px;
+            border-radius: 35px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 25px;
             color: white;
             overflow: hidden;
         }
@@ -185,51 +195,53 @@
         }
         
         .screen h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 32px;
-            margin-bottom: 20px;
+            font-size: 36px;
+            margin-bottom: 25px;
             color: #ffdd59;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
         
         .screen p {
-            font-size: 18px;
+            font-size: 20px;
             margin-bottom: 30px;
-            max-width: 80%;
-            line-height: 1.5;
+            max-width: 85%;
+            line-height: 1.6;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
         }
         
         .camera {
             position: absolute;
-            top: 20px;
+            top: 25px;
             left: 50%;
             transform: translateX(-50%);
-            width: 30px;
-            height: 30px;
+            width: 35px;
+            height: 35px;
             background: #000;
             border-radius: 50%;
             z-index: 2;
+            box-shadow: inset 0 0 0 3px #333;
         }
         
         .claim-btn {
             background: linear-gradient(45deg, #ff2d75, #ff7c43);
             color: white;
-            font-family: 'Poppins', sans-serif;
-            font-size: 24px;
+            font-size: 28px;
             font-weight: 700;
-            padding: 20px 50px;
+            padding: 22px 60px;
             border: none;
-            border-radius: 50px;
+            border-radius: 60px;
             cursor: pointer;
-            box-shadow: 0 10px 30px rgba(255, 45, 117, 0.5);
+            box-shadow: 0 12px 35px rgba(255, 45, 117, 0.6);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
             z-index: 3;
+            margin: 30px 0;
         }
         
         .claim-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(255, 45, 117, 0.7);
+            transform: translateY(-7px);
+            box-shadow: 0 18px 40px rgba(255, 45, 117, 0.8);
         }
         
         .claim-btn:active {
@@ -243,56 +255,92 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.15);
             transform: rotate(30deg);
             transition: all 0.5s;
             z-index: -1;
         }
         
         .claim-btn:hover::after {
-            transform: rotate(30deg) translate(10%, 10%);
+            transform: rotate(30deg) translate(15%, 15%);
         }
         
         .footer {
             margin-top: 30px;
             color: #777;
-            font-size: 14px;
+            font-size: 18px;
         }
         
         .disclaimer {
-            font-size: 12px;
-            margin-top: 15px;
+            font-size: 14px;
+            margin-top: 20px;
             color: #999;
             font-style: italic;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .counter {
             display: inline-block;
             background: #f0f0f0;
-            border-radius: 20px;
-            padding: 10px 20px;
-            margin: 20px 0;
+            border-radius: 25px;
+            padding: 12px 25px;
+            margin: 25px 0;
             font-weight: 600;
-            box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: inset 0 3px 8px rgba(0,0,0,0.1);
+            font-size: 18px;
         }
         
-        @media (max-width: 600px) {
+        .video-container {
+            display: none;
+            margin-top: 40px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        @media (max-width: 650px) {
+            .container {
+                padding: 25px;
+            }
+            
             h1 {
-                font-size: 36px;
+                font-size: 40px;
             }
             
             .winner-name {
-                font-size: 32px;
+                font-size: 36px;
+                padding: 8px 20px;
             }
             
             .prize-container {
-                width: 250px;
-                height: 500px;
+                width: 260px;
+                height: 520px;
             }
             
             .claim-btn {
-                padding: 15px 40px;
-                font-size: 20px;
+                padding: 18px 45px;
+                font-size: 24px;
+            }
+            
+            .screen h2 {
+                font-size: 28px;
+            }
+            
+            .screen p {
+                font-size: 16px;
             }
         }
     </style>
@@ -304,10 +352,10 @@
         <div class="header">
             <div class="logo">
                 <i class="fab fa-apple apple-logo"></i>
-                <div class="logo-text">iPhone 17</div>
+                <div class="logo-text">iPhone 17 Pro</div>
             </div>
             <h1>CONGRATULATIONS!</h1>
-            <div class="subtitle">You are the Grand Prize Winner!</div>
+            <div class="subtitle">You are the Grand Prize Winner of</div>
             <div class="winner-name">Ken Ivan</div>
         </div>
         
@@ -321,8 +369,8 @@
                     <div class="camera"></div>
                     <div class="screen">
                         <h2>iPhone 17 Pro Max</h2>
-                        <p>Congratulations! You've won the latest iPhone with revolutionary holographic display technology.</p>
-                        <p>512GB Storage • Holographic Camera • Neural Processor</p>
+                        <p>Congratulations Ken Ivan! You've won the revolutionary new iPhone 17 with holographic display technology.</p>
+                        <p>1TB Storage • Neural Engine • Holographic Camera</p>
                     </div>
                 </div>
             </div>
@@ -332,9 +380,17 @@
             <i class="fas fa-gift"></i> CLAIM YOUR PRIZE NOW
         </button>
         
+        <div class="video-container" id="cocomelonVideo">
+            <iframe src="https://www.youtube.com/embed/e_04ZrNroTo?si=zgfXZBz_VtyxD984" 
+                    title="Cocomelon - Wheels on the Bus" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+        
         <div class="footer">
-            <p>This prize must be claimed within the next 10 minutes</p>
-            <div class="disclaimer">*Offer valid for selected winner only. Taxes and fees may apply. Prize subject to verification.</div>
+            <p>This exclusive prize must be claimed within the next 10 minutes</p>
+            <div class="disclaimer">*Offer valid for selected winner only. By claiming, you agree to our terms. Prize subject to verification and availability. Taxes and fees may apply. This is not an official Apple promotion.</div>
         </div>
     </div>
 
@@ -342,6 +398,7 @@
         // Create confetti effect
         function createConfetti() {
             const colors = ['#ff2d75', '#ff7c43', '#ffdd59', '#6e45e2', '#88d3ce'];
+            const shapes = ['circle', 'rect'];
             const container = document.body;
             
             for (let i = 0; i < 150; i++) {
@@ -350,22 +407,26 @@
                 
                 // Random properties
                 const color = colors[Math.floor(Math.random() * colors.length)];
-                const size = Math.random() * 10 + 5;
+                const size = Math.random() * 12 + 8;
                 const left = Math.random() * 100;
-                const animationDuration = Math.random() * 3 + 2;
+                const animationDuration = Math.random() * 4 + 3;
+                const shape = shapes[Math.floor(Math.random() * shapes.length)];
                 
                 confetti.style.left = `${left}vw`;
                 confetti.style.width = `${size}px`;
                 confetti.style.height = `${size}px`;
                 confetti.style.backgroundColor = color;
                 confetti.style.animationDuration = `${animationDuration}s`;
-                confetti.style.animationDelay = `${Math.random() * 2}s`;
+                confetti.style.animationDelay = `${Math.random() * 3}s`;
+                confetti.style.borderRadius = shape === 'circle' ? '50%' : '2px';
                 
                 container.appendChild(confetti);
                 
                 // Remove confetti after animation
                 setTimeout(() => {
-                    confetti.remove();
+                    if (confetti.parentNode) {
+                        confetti.parentNode.removeChild(confetti);
+                    }
                 }, animationDuration * 1000);
             }
         }
@@ -379,14 +440,27 @@
         // Handle claim button click
         document.getElementById('claimBtn').addEventListener('click', function() {
             // Add click effect
-            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> PROCESSING...';
+            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> PROCESSING YOUR PRIZE...';
             this.style.background = 'linear-gradient(45deg, #6e45e2, #88d3ce)';
+            this.disabled = true;
             
-            // Redirect after delay
+            // Show the Cocomelon video after 2.5 seconds
             setTimeout(() => {
-                window.location.href = 'https://www.youtube.com/watch?v=gEw8xpb1aRA';
+                document.getElementById('cocomelonVideo').style.display = 'block';
+                
+                // Scroll to the video
+                document.getElementById('cocomelonVideo').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+                
+                // Add celebration message
+                const celebration = document.createElement('div');
+                celebration.innerHTML = '<h2 style="margin: 20px 0; color: #ff2d75;">🎉 SURPRISE KEN IVAN! 🎉</h2>';
+                celebration.innerHTML += '<p style="font-size: 24px; margin-bottom: 30px;">Enjoy your "prize"! 😂</p>';
+                document.querySelector('.footer').parentNode.insertBefore(celebration, document.querySelector('.footer'));
             }, 2500);
         });
     </script>
 </body>
-          </html>
+</html>
