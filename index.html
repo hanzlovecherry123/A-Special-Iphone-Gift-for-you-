@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations! You've Won an iPhone 17</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #6e45e2, #88d3ce);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #f00;
+            animation: fall linear forwards;
+            z-index: 1;
+        }
+        
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .container {
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 100%;
+            overflow: hidden;
+            text-align: center;
+            padding: 40px;
+            transform: scale(0.9);
+            animation: scaleIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+        
+        @keyframes scaleIn {
+            to {
+                transform: scale(1);
+            }
+        }
+        
+        .header {
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .apple-logo {
+            font-size: 40px;
+            color: #333;
+        }
+        
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 36px;
+            letter-spacing: -1px;
+            background: linear-gradient(45deg, #ff2d75, #ff7c43, #ffdd59);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 48px;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #6e45e2, #ff2d75);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+        
+        .subtitle {
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        .winner-name {
+            font-size: 42px;
+            font-weight: 800;
+            color: #ff2d75;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .prize-container {
+            position: relative;
+            margin: 40px auto;
+            width: 300px;
+            height: 600px;
+            perspective: 1000px;
+        }
+        
+        .iphone {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transform: rotateY(-20deg);
+            transition: transform 1s;
+        }
+        
+        .iphone:hover {
+            transform: rotateY(20deg);
+        }
+        
+        .iphone-body {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #a2aab0, #eef2f3);
+            border-radius: 40px;
+            box-shadow: inset 0 0 0 4px #e2e6e9, 0 30px 50px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .screen {
+            position: absolute;
+            top: 20px;
+            left: 15px;
+            right: 15px;
+            bottom: 20px;
+            background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: white;
+            overflow: hidden;
+        }
+        
+        .screen::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(30deg);
+        }
+        
+        .screen h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #ffdd59;
+        }
+        
+        .screen p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 80%;
+            line-height: 1.5;
+        }
+        
+        .camera {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            background: #000;
+            border-radius: 50%;
+            z-index: 2;
+        }
+        
+        .claim-btn {
+            background: linear-gradient(45deg, #ff2d75, #ff7c43);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            padding: 20px 50px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(255, 45, 117, 0.5);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 3;
+        }
+        
+        .claim-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(255, 45, 117, 0.7);
+        }
+        
+        .claim-btn:active {
+            transform: translateY(0);
+        }
+        
+        .claim-btn::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(30deg);
+            transition: all 0.5s;
+            z-index: -1;
+        }
+        
+        .claim-btn:hover::after {
+            transform: rotate(30deg) translate(10%, 10%);
+        }
+        
+        .footer {
+            margin-top: 30px;
+            color: #777;
+            font-size: 14px;
+        }
+        
+        .disclaimer {
+            font-size: 12px;
+            margin-top: 15px;
+            color: #999;
+            font-style: italic;
+        }
+        
+        .counter {
+            display: inline-block;
+            background: #f0f0f0;
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin: 20px 0;
+            font-weight: 600;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 36px;
+            }
+            
+            .winner-name {
+                font-size: 32px;
+            }
+            
+            .prize-container {
+                width: 250px;
+                height: 500px;
+            }
+            
+            .claim-btn {
+                padding: 15px 40px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Confetti elements will be generated by JS -->
+    
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <i class="fab fa-apple apple-logo"></i>
+                <div class="logo-text">iPhone 17</div>
+            </div>
+            <h1>CONGRATULATIONS!</h1>
+            <div class="subtitle">You are the Grand Prize Winner of</div>
+            <div class="winner-name">Ken Ivan</div>
+        </div>
+        
+        <div class="counter">
+            <i class="fas fa-users"></i> 12,847 participants | <i class="fas fa-gift"></i> 1 winner selected
+        </div>
+        
+        <div class="prize-container">
+            <div class="iphone">
+                <div class="iphone-body">
+                    <div class="camera"></div>
+                    <div class="screen">
+                        <h2>iPhone 17 Pro Max</h2>
+                        <p>Congratulations! You've won the latest iPhone with revolutionary holographic display technology.</p>
+                        <p>512GB Storage • Holographic Camera • Neural Processor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button id="claimBtn" class="claim-btn">
+            <i class="fas fa-gift"></i> CLAIM YOUR PRIZE NOW
+        </button>
+        
+        <div class="footer">
+            <p>This prize must be claimed within the next 10 minutes</p>
+            <div class="disclaimer">*Offer valid for selected winner only. Taxes and fees may apply. Prize subject to verification.</div>
+        </div>
+    </div>
+
+    <script>
+        // Create confetti effect
+        function createConfetti() {
+            const colors = ['#ff2d75', '#ff7c43', '#ffdd59', '#6e45e2', '#88d3ce'];
+            const container = document.body;
+            
+            for (let i = 0; i < 150; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                
+                // Random properties
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const size = Math.random() * 10 + 5;
+                const left = Math.random() * 100;
+                const animationDuration = Math.random() * 3 + 2;
+                
+                confetti.style.left = `${left}vw`;
+                confetti.style.width = `${size}px`;
+                confetti.style.height = `${size}px`;
+                confetti.style.backgroundColor = color;
+                confetti.style.animationDuration = `${animationDuration}s`;
+                confetti.style.animationDelay = `${Math.random() * 2}s`;
+                
+                container.appendChild(confetti);
+                
+                // Remove confetti after animation
+                setTimeout(() => {
+                    confetti.remove();
+                }, animationDuration * 1000);
+            }
+        }
+        
+        // Initial confetti
+        createConfetti();
+        
+        // Add more confetti every 3 seconds
+        setInterval(createConfetti, 3000);
+        
+        // Handle claim button click
+        document.getElementById('claimBtn').addEventListener('click', function() {
+            // Add click effect
+            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> PROCESSING...';
+            this.style.background = 'linear-gradient(45deg, #6e45e2, #88d3ce)';
+            
+            // Redirect after delay
+            setTimeout(() => {
+                window.location.href = 'https://www.youtube.com/watch?v=gEw8xpb1aRA';
+            }, 2500);
+        });
+    </script>
+</body>
+          </html>
